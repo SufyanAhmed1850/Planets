@@ -4,6 +4,9 @@
     margin: 0;
     color: #FFFFFF;
 }
+::-webkit-scrollbar {
+    display: none;
+}
 body{
     background-color: #070724;
     background-image: url(images/dots.svg);
