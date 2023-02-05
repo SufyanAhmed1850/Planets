@@ -27,7 +27,10 @@ h1{
 .navbar-nav{
     gap: 2rem;
 }
-.navbar-nav a{
+.navbar-nav img{
+    display: none;
+}
+.navbar-nav span{
     font-family: 'League Spartan', sans-serif;
     font-weight: 700;
     font-size: 0.75rem;
@@ -37,6 +40,7 @@ h1{
 .navbar{
     padding: 0.5rem 0.5rem;
     background-color: #070724 !important;
+    border-bottom: 1px solid #38384F;
 }
 p{
     font-family: 'League Spartan', sans-serif;
@@ -92,12 +96,13 @@ h4{
 .fa-solid{
     font-size: 1rem;
     padding: 0 0.7rem;
-    color: #838391;
+    color: #FFFFFF;
 }
 .navbar-toggler{
     display: flex;
-    padding: 0.5rem 0rem;
-    background-color: #FFFFFF;
+    padding: 0.5rem 0.25rem;
+    align-items: center;
+    justify-content: center;
 }
 .button{
     display: flex;
@@ -142,11 +147,12 @@ button{
 h1{
     color: #D83A34;
 }
-.nav_jupiter:focus{
-    color: #D83A34;
-}
 .nav_jupiter:hover{
     color: #D83A34;
+}
+.navbar-toggler-jupiter{
+    background-color: #D83A34;
+    color: transparent;
 }
 /* ------------------------------------------------VENUS-----COLORS------------------------------------------------ */
 .button_venus button:hover {
@@ -168,11 +174,12 @@ h1{
 .linkhover_venus:hover{
     color: #EDA249;
 }
-.nav_venus:focus{
-    color: #EDA249;
-}
 .nav_venus:hover{
     color: #EDA249;
+}
+.navbar-toggler-venus{
+    background-color: #EDA249;
+    color: transparent;
 }
 /* ------------------------------------------------EARTH-----COLORS------------------------------------------------ */
 .button_earth button:hover {
@@ -194,11 +201,12 @@ h1{
 .linkhover_earth:hover{
     color: #6D2ED5;
 }
-.nav_earth:focus{
-    color: #6D2ED5;
-}
 .nav_earth:hover{
     color: #6D2ED5;
+}
+.navbar-toggler-earth{
+    background-color: #6D2ED5;
+    color: transparent;
 }
 /* ------------------------------------------------MARS-----COLORS------------------------------------------------ */
 .button_mars button:hover {
@@ -220,11 +228,12 @@ h1{
 .linkhover_mars:hover{
     color: #D14C32;
 }
-.nav_mars:focus{
-    color: #D14C32;
-}
 .nav_mars:hover{
     color: #D14C32;
+}
+.navbar-toggler-mars{
+    background-color: #D14C32;
+    color: transparent;
 }
 /* ------------------------------------------------MERCURY-----COLORS------------------------------------------------ */
 .button_mercury button:hover {
@@ -246,11 +255,12 @@ h1{
 .linkhover_mercury:hover{
     color: #419EBB;
 }
-.nav_mercury:focus{
-    color: #419EBB;
-}
 .nav_mercury:hover{
     color: #419EBB;
+}
+.navbar-toggler-mercury{
+    background-color: #419EBB;
+    color: transparent;
 }
 /* ------------------------------------------------SATURN-----COLORS------------------------------------------------ */
 .button_saturn button:hover {
@@ -272,11 +282,12 @@ h1{
 .linkhover_saturn:hover{
     color: #CD5120;
 }
-.nav_saturn:focus{
-    color: #CD5120;
-}
 .nav_saturn:hover{
     color: #CD5120;
+}
+.navbar-toggler-saturn{
+    background-color: #CD5120;
+    color: transparent;
 }
 /* ------------------------------------------------URANUS-----COLORS------------------------------------------------ */
 .button_uranus button:hover {
@@ -298,11 +309,12 @@ h1{
 .linkhover_uranus:hover{
     color: #1EC1A2;
 }
-.nav_uranus:focus{
-    color: #1EC1A2;
-}
 .nav_uranus:hover{
     color: #1EC1A2;
+}
+.navbar-toggler-uranus{
+    background-color: #1EC1A2;
+    color: transparent;
 }
 /* ------------------------------------------------NEPTUNE-----COLORS------------------------------------------------ */
 .button_neptune button:hover {
@@ -324,11 +336,12 @@ h1{
 .linkhover_neptune:hover{
     color: #2D68F0;
 }
-.nav_neptune:focus{
-    color: #2D68F0;
-}
 .nav_neptune:hover{
     color: #2D68F0;
+}
+.navbar-toggler-neptune{
+    background-color: #2D68F0;
+    color: transparent;
 }
 /* ------------------------------------------------THE-----END------------------------------------------------ */
 .footer{
@@ -388,7 +401,7 @@ h1{
         display: flex;
         justify-content: center;
         align-items: center;
-        border-top: 1px solid #838391;
+        border-top: 1px solid #38384F;
         padding-top: 0.75rem;
     }
     .main{
@@ -448,15 +461,34 @@ h1{
     .container-fluid{
         flex-direction: row;
     }
+    .navbar-nav img{
+        display: inline;
+    }
+    .navbar-nav a{
+        font-size: 0.875rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1em;
+    }
+    .navbar-nav .a_saturn{
+        gap: 0.5625rem;
+    }
+    .navbar-nav span{
+        width: 60px;
+    }
+    .navbar {
+        background-image: url(images/dots.svg);
+    }
   }
   @media only screen and (max-width: 1415px) {
     .main {
-    gap: 10rem;
+    gap: 5rem;
     }
   }
   @media only screen and (max-width: 1227px) {
     .main {
-        gap: 5rem;
+        gap: 2.5rem;
         }
   }
   @media only screen and (max-width: 400px) {
@@ -464,7 +496,7 @@ h1{
         width: 15.625rem;
     }
     .main {
-        gap: 3rem;
+        gap: 2.5rem;
     }
     h1 {
         font-size: 3.5rem;
