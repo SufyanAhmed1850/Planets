@@ -2,6 +2,8 @@ let img = document.getElementById('javaimg');
 let btn1 = document.querySelector('#btn1');
 let btn2 = document.querySelector('#btn2');
 let btn3 = document.querySelector('#btn3');
+const btnKeep = document.querySelector('.box')
+const btnAll = document.querySelectorAll('.box')
 
 btn1.addEventListener('click', () => {
     img.src = 'images/mars1.svg';
@@ -21,3 +23,10 @@ btn3.addEventListener('click', () => {
         document.getElementById('p1').innerHTML = "Mars is a terrestrial planet whose surface consists of minerals containing silicon and oxygen, metals, and other elements that typically make up rock. The surface is primarily composed of tholeiitic basalt, although parts are more silica-rich than typical basalt.";
     }
 })
+btnAll.forEach(btnKeep => {
+    btnKeep.addEventListener('click', () => {
+        document.querySelector('.keep_mars')?.classList.remove('keep_mars');
+        btnKeep.classList.add('keep_mars');
+
+    })
+});

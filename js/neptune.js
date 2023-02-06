@@ -2,6 +2,8 @@ let img = document.getElementById('javaimg');
 let btn1 = document.querySelector('#btn1');
 let btn2 = document.querySelector('#btn2');
 let btn3 = document.querySelector('#btn3');
+const btnKeep = document.querySelector('.box')
+const btnAll = document.querySelectorAll('.box')
 
 btn1.addEventListener('click', () => {
     img.src = 'images/neptune1.svg';
@@ -21,3 +23,10 @@ btn3.addEventListener('click', () => {
         document.getElementById('p1').innerHTML = "Neptune's atmosphere is 80% hydrogen and 19% helium. A trace amount of methane is also present. Prominent absorption bands of methane exist at wavelengths above 600 nm, in the red and infrared portion of the spectrum.";
     }
 })
+btnAll.forEach(btnKeep => {
+    btnKeep.addEventListener('click', () => {
+        document.querySelector('.keep_neptune')?.classList.remove('keep_neptune');
+        btnKeep.classList.add('keep_neptune');
+
+    })
+});

@@ -2,6 +2,8 @@ let img = document.getElementById('javaimg');
 let btn1 = document.querySelector('#btn1');
 let btn2 = document.querySelector('#btn2');
 let btn3 = document.querySelector('#btn3');
+const btnKeep = document.querySelector('.box')
+const btnAll = document.querySelectorAll('.box')
 
 btn1.addEventListener('click', () => {
     img.src = 'images/venus1.svg';
@@ -21,3 +23,10 @@ if(btn3.onclick="changeText();") {
     document.getElementById('p1').innerHTML = "The best known feature of Jupiter is the Great Red Spot, a persistent anticyclonic storm located 22° south of the equator. It is known to have existed since at least 1831, and possibly since 1665.";
     }
 })
+btnAll.forEach(btnKeep => {
+    btnKeep.addEventListener('click', () => {
+        document.querySelector('.keep_venus')?.classList.remove('keep_venus');
+        btnKeep.classList.add('keep_venus');
+
+    })
+});

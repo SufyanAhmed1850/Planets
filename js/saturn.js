@@ -2,6 +2,8 @@ let img = document.getElementById('javaimg');
 let btn1 = document.querySelector('#btn1');
 let btn2 = document.querySelector('#btn2');
 let btn3 = document.querySelector('#btn3');
+const btnKeep = document.querySelector('.box')
+const btnAll = document.querySelectorAll('.box')
 
 btn1.addEventListener('click', () => {
     img.src = 'images/saturn1.svg';
@@ -21,3 +23,10 @@ btn3.addEventListener('click', () => {
         document.getElementById('p1').innerHTML = "The outer atmosphere of Saturn contains 96.3% molecular hydrogen and 3.25% helium by volume. The planet's most famous feature is its prominent ring system, which is composed mostly of ice particles with a smaller amount of rocky debris and dust.";
     }
 })
+btnAll.forEach(btnKeep => {
+    btnKeep.addEventListener('click', () => {
+        document.querySelector('.keep_saturn')?.classList.remove('keep_saturn');
+        btnKeep.classList.add('keep_saturn');
+
+    })
+});

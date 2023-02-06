@@ -2,6 +2,8 @@ let img = document.getElementById('javaimg');
 let btn1 = document.querySelector('#btn1');
 let btn2 = document.querySelector('#btn2');
 let btn3 = document.querySelector('#btn3');
+const btnKeep = document.querySelector('.box')
+const btnAll = document.querySelectorAll('.box')
 
 btn1.addEventListener('click', () => {
     img.src = 'images/uranus1.svg';
@@ -21,3 +23,10 @@ btn3.addEventListener('click', () => {
         document.getElementById('p1').innerHTML = "The composition of Uranus's atmosphere is different from its bulk, consisting mainly of molecular hydrogen and helium. The helium molar fraction, i.e. the number of helium atoms per molecule of gas, is 0.15±0.03 in the upper troposphere.";
     }
 })
+btnAll.forEach(btnKeep => {
+    btnKeep.addEventListener('click', () => {
+        document.querySelector('.keep_uranus')?.classList.remove('keep_uranus');
+        btnKeep.classList.add('keep_uranus');
+
+    })
+});
